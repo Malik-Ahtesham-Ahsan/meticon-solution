@@ -441,6 +441,41 @@ nav.scrolled .nav-links a {
     transform: translateY(-2px);
 }
 
+/* See More Button */
+.btn-see-more {
+    display: inline-block !important;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    color: #0066cc !important;
+    border: 2px solid #0066cc !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin-top: 1rem !important;
+    width: auto !important;
+    align-self: flex-start !important;
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2) !important;
+    position: relative !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.btn-see-more:hover {
+    background: #0066cc !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3) !important;
+    cursor: pointer !important;
+}
+
+.btn-see-more:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2) !important;
+}
+
 /* ---------- Cards & shared panels ---------- */
 .card {
     background: var(--surface);
@@ -610,6 +645,9 @@ nav.scrolled .nav-links a {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card::before {
@@ -632,6 +670,23 @@ nav.scrolled .nav-links a {
     transform: translateY(-10px);
     box-shadow: 0 20px 50px rgba(89, 27, 197, 0.18);
     border-color: #591BC5;
+}
+
+.service-card .service-features {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.service-card .btn-see-more {
+    margin-top: auto;
+    align-self: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.service-card:hover .btn-see-more {
+    animation-play-state: paused;
+    transform: translateY(-2px);
 }
 
 .service-icon {
@@ -1847,7 +1902,22 @@ footer a:hover {
 }
 
 .modal-btn {
-    composes: btn-primary;
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    border-radius: 10px;
+    background: linear-gradient(132deg, var(--brand-pink), var(--brand-purple));
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-1);
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.modal-btn:hover {
+    opacity: .92;
+    transform: translateY(-2px);
 }
 
 /* ---------- Responsive tweaks ---------- */
@@ -1862,4 +1932,37 @@ footer a:hover {
     .faq-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ===== SEE MORE BUTTON STYLES ===== */
+button.btn-see-more {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #0066cc;
+    border: 2px solid #0066cc;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    width: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 102, 204, 0.2);
+}
+
+button.btn-see-more:hover {
+    background-color: #0066cc;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    cursor: pointer;
+}
+
+button.btn-see-more:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 102, 204, 0.2);
 }
