@@ -1966,3 +1966,31 @@ button.btn-see-more:active {
     transform: translateY(0);
     box-shadow: 0 2px 6px rgba(0, 102, 204, 0.2);
 }
+
+.hero-socials {
+    margin-top: 20px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 54px;
+    z-index: 3;
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.hero-socials a {
+    color: white !important;
+    font-size: 24px !important;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-socials a:hover {
+    color: #ff4081 !important;
+    transform: scale(1.2);
+}
